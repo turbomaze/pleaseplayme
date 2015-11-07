@@ -1,0 +1,15 @@
+body {
+	padding:0;
+	margin:0;
+	background-color: #fef2e7;
+}
+
+
+#pushimg {
+	position:absolute;
+	display:block;
+	width:860px;
+	height:740px;
+	left:calc(50vw - 430px);
+	top:calc(50vh - 370px);
+}

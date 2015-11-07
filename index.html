@@ -8,10 +8,19 @@
 
     <link rel="stylesheet" type="text/css" href="css/toast.css">
     <link rel="stylesheet" type="text/css" href="css/style.css">
-
     <script src="js/ppm.js"></script>
+    
   </head>
   <body>
-    <canvas id="canvas"></canvas>
+    <img id='pushimg' src='images/sad.png'>
+    <script>
+      var pushimg = document.getElementById('pushimg')
+      pushimg.onmouseover=function() {
+        pushimg.src = 'images/hand2.gif'
+      }
+      pushimg.onmouseleave=function() {
+        pushimg.src = 'images/sad.png'
+      }
+    </script>
   </body>
 </html>
