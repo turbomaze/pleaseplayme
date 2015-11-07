@@ -11,7 +11,7 @@ var PleasePlayMe = (function() {
 
     /**********
      * config */
-    var DIMS = [800, 600]; //canvas dimensions
+    var DIMS = [0, 0]; //canvas dimensions
 
     /*************
      * constants */
@@ -27,8 +27,15 @@ var PleasePlayMe = (function() {
       canvas.width = DIMS[0];
       canvas.height = DIMS[1];
       ctx = canvas.getContext('2d');
-      ctx.fillStyle = 'red';
+      ctx.fillStyle = '#fbefe3';
       ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+      var img = new Image();
+      img.onload = function() {
+        ctx.drawImage(img, 300, 300, img.width, img.height)
+      }
+      //img.src = 'images/sad.jpg'
+      
     }
 
     /********************
@@ -43,4 +50,4 @@ var PleasePlayMe = (function() {
     };
 })();
 
-window.addEventListener('load', PleasePlayMe.init);
+//window.addEventListener('load', PleasePlayMe.init);
